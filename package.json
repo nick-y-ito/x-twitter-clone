@@ -1,0 +1,18 @@
+{
+	"name": "wad-301-mid-term-twootr",
+	"version": "1.0.0",
+	"description": "Twootr is a Single Page Application that will allow the user to read and create _twoots_. No user authentication or registration is required.",
+	"main": "index.js",
+	"scripts": {
+		"frontend": "npm run dev --prefix frontend",
+		"server": "npm start --prefix server",
+		"dev": "concurrently \"npm run frontend\" \"npm run server\""
+	},
+	"workspaces": ["frontend", "server"],
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^8.2.2"
+	}
+}

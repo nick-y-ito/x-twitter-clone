@@ -8,7 +8,10 @@
 		"server": "npm start --prefix server",
 		"dev": "concurrently \"npm run frontend\" \"npm run server\""
 	},
-	"workspaces": ["frontend", "server"],
+	"workspaces": [
+		"frontend",
+		"server"
+	],
 	"keywords": [],
 	"author": "",
 	"license": "ISC",

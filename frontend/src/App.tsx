@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { NewPost } from "@/components/NewPost/NewPost";
 import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";
 import { useEffect, useState } from "react";
@@ -16,6 +17,7 @@ export const App = () => {
 		<>
 			<Header />
 			<main className="w-full min-h-screen">
+				<NewPost />
 				{posts.map((post) => (
 					<Post key={post._id} post={post} />
 				))}

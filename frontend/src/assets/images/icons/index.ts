@@ -1,4 +1,5 @@
 /// <reference types="vite-plugin-svgr/client" />
+export { default as IconEarth } from "./icon-earth.svg?react";
 export { default as IconMeatball } from "./icon-meatball.svg?react";
 export { default as IconSpeechBubble } from "./icon-speech-bubble.svg?react";
 export { default as IconSettings } from "./icon-settings.svg?react";

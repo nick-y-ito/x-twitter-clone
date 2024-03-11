@@ -11,3 +11,8 @@ export { default as IconHeartSelected } from "./icon-heart-selected.svg?react";
 export { default as IconRepost } from "./icon-repost.svg?react";
 export { default as IconRepostSelected } from "./icon-repost-selected.svg?react";
 export { default as IconShare } from "./icon-share.svg?react";
+export { default as IconEmoji } from "./icon-emoji.svg?react";
+export { default as IconGif } from "./icon-gif.svg?react";
+export { default as IconImage } from "./icon-image.svg?react";
+export { default as IconLocation } from "./icon-location.svg?react";
+export { default as IconPlus } from "./icon-plus.svg?react";

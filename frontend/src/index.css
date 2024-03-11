@@ -8,5 +8,10 @@
 		--color-primary-foreground: rgb(231, 233, 234);
 		--color-accent: rgb(29, 155, 240);
 		--color-border: rgb(47, 51, 54);
+		--color-muted: rgb(113, 117, 122);
+
+		--color-repost: rgb(0, 184, 122);
+		--color-heart: rgb(249, 26, 130);
+		--color-bookmark: rgb(29, 155, 240);
 	}
 }

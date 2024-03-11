@@ -8,7 +8,11 @@ export default {
 				primary: "var(--color-primary)",
 				"primary-foreground": "var(--color-primary-foreground)",
 				accent: "var(--color-accent)",
+				muted: "var(--color-muted)",
 				border: "var(--color-border)",
+				repost: "var(--color-repost)",
+				heart: "var(--color-heart)",
+				bookmark: "var(--color-bookmark)",
 			},
 			height: {
 				13: "3.25rem",

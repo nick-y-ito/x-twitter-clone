@@ -1,12 +1,16 @@
 import { IconEarth } from "@/assets/images/icons";
-import { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent, useRef } from "react";
 
-export const NewPostInput = () => {
-	const [text, setText] = useState("");
+interface INewPostInputProps {
+	content: string;
+	setContent: (content: string) => void;
+}
+
+export const NewPostInput = ({ content, setContent }: INewPostInputProps) => {
 	const textareaRef = useRef<HTMLTextAreaElement>(null);
 
 	const handleTextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-		setText(e.target.value);
+		setContent(e.target.value);
 		if (textareaRef.current) {
 			textareaRef.current.style.height = "auto";
 			textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
@@ -18,7 +22,8 @@ export const NewPostInput = () => {
 			<textarea
 				ref={textareaRef}
 				id="new-post"
-				value={text}
+				name="content"
+				value={content}
 				onChange={handleTextChange}
 				className="w-full text-xl"
 				placeholder="What is happening?"

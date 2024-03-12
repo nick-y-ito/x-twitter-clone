@@ -9,6 +9,8 @@ export default {
 				"primary-foreground": "var(--color-primary-foreground)",
 				accent: "var(--color-accent)",
 				muted: "var(--color-muted)",
+				danger: "var(--color-danger)",
+				warn: "var(--color-warn)",
 				border: "var(--color-border)",
 				repost: "var(--color-repost)",
 				heart: "var(--color-heart)",

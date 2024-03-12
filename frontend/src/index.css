@@ -7,7 +7,7 @@
 		--color-primary: rgb(0, 0, 0);
 		--color-primary-foreground: rgb(231, 233, 234);
 		--color-accent: rgb(29, 155, 240);
-		--color-border: rgb(47, 51, 54);
+		--color-accent-foreground: rgb(255, 255, 255);
 		--color-muted: rgb(113, 117, 122);
 		--color-danger: rgb(244, 33, 46);
 		--color-warn: rgb(255, 212, 0);

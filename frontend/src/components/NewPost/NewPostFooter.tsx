@@ -56,7 +56,7 @@ export const NewPostFooter = ({ count }: INewPostFooterProps) => {
 				<button
 					type="submit"
 					className={cn(
-						"flex items-center justify-center bg-accent h-9 p-4 rounded-full font-bold text",
+						"flex items-center justify-center bg-accent text-accent-foreground h-9 p-4 rounded-full font-bold text",
 						disabled && "opacity-50"
 					)}
 					disabled={disabled}

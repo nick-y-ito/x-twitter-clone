@@ -8,6 +8,7 @@ export default {
 				primary: "var(--color-primary)",
 				"primary-foreground": "var(--color-primary-foreground)",
 				accent: "var(--color-accent)",
+				"accent-foreground": "var(--color-accent-foreground)",
 				muted: "var(--color-muted)",
 				danger: "var(--color-danger)",
 				warn: "var(--color-warn)",

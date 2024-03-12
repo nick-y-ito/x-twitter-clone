@@ -7,17 +7,17 @@ import {
 	useState,
 } from "react";
 
-type ThemeProviderState = {
+type ColorThemeProviderState = {
 	colorTheme: ColorTheme;
 	setColorTheme: (theme: ColorTheme) => void;
 };
 
-const initialState: ThemeProviderState = {
+const initialState: ColorThemeProviderState = {
 	colorTheme: ColorTheme.SYSTEM,
 	setColorTheme: () => null,
 };
 
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
+const ColorThemeProviderContext = createContext<ColorThemeProviderState>(initialState);
 
 interface ThemeProviderProps {
 	children: ReactNode;
@@ -63,17 +63,17 @@ export const ColorThemeProvider = ({
 	};
 
 	return (
-		<ThemeProviderContext.Provider {...props} value={value}>
+		<ColorThemeProviderContext.Provider {...props} value={value}>
 			{children}
-		</ThemeProviderContext.Provider>
+		</ColorThemeProviderContext.Provider>
 	);
 };
 
 export const useColorThemeContext = () => {
-	const context = useContext(ThemeProviderContext);
+	const context = useContext(ColorThemeProviderContext);
 
 	if (context === undefined)
-		throw new Error("useColorTheme must be used within a ColorThemeProvider");
+		throw new Error("useColorThemeContext must be used within a ColorThemeProvider");
 
 	return context;
 };

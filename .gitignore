@@ -133,3 +133,4 @@ dist
 #MACOS
 
 .DS_STORE
+.vscode/settings.json

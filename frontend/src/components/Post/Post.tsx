@@ -3,6 +3,7 @@ import { PostFooter } from "@/components/Post/PostFooter";
 import { PostHeader } from "@/components/Post/PostHeader";
 import { PostType } from "@/types/post";
 import { isTag } from "@/lib/utils";
+import React, { Fragment } from "react";
 
 export const Post = ({ post }: { post: PostType }) => {
 	const words = post.content.split(/\s+/);
@@ -19,17 +20,17 @@ export const Post = ({ post }: { post: PostType }) => {
 					{words.map((word, i) => {
 						if (isTag(word)) {
 							return (
-								<>
+								<Fragment key={i}>
 									<a className="text-accent">{word}</a>
 									{i < words.length - 1 ? " " : ""}
-								</>
+								</Fragment>
 							);
 						}
 						return (
-							<>
+							<Fragment key={i}>
 								{word}
 								{i < words.length - 1 ? " " : ""}
-							</>
+							</Fragment>
 						);
 					})}
 				</div>
@@ -37,12 +38,12 @@ export const Post = ({ post }: { post: PostType }) => {
 					{post.tags?.map((tag, i) => {
 						if (words.includes(`#${tag}`)) return;
 						return (
-							<>
+							<Fragment key={i}>
 								{i > 0 ? " " : ""}
 								<a key={tag} className="text-accent cursor-pointer">
 									#{tag}
 								</a>
-							</>
+							</Fragment>
 						);
 					})}
 				</div>

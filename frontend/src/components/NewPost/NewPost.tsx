@@ -1,34 +1,12 @@
 import { NewPostInput } from "@/components/NewPost/NewPostInput";
 import { NewPostFooter } from "./NewPostFooter";
-import { FormEvent, useState } from "react";
-import { createPost } from "@/lib/actions";
-import { NewPostType, PostType } from "@/types/post";
+import { PostType } from "@/types/post";
 import { useUserContext } from "@/hooks/useUserContext";
+import { useNewPost } from "@/components/NewPost/useNewPost";
 
 export const NewPost = () => {
 	const { name, slug } = useUserContext();
-
-	const defaultNewPost: NewPostType = {
-		author: "",
-		authorSlug: "",
-		content: "",
-		tags: [],
-		dateAdded: "",
-	};
-
-	const [values, setValues] = useState(defaultNewPost);
-
-	const handleSubmit = async (e: FormEvent) => {
-		e.preventDefault();
-		try {
-			const formData = new FormData(e.target as HTMLFormElement);
-			await createPost(formData);
-			alert("Posted");
-			setValues(defaultNewPost);
-		} catch {
-			return alert("Something went wrong. Please try again.");
-		}
-	};
+	const { values, setValues, handleSubmit } = useNewPost();
 
 	return (
 		<form onSubmit={handleSubmit} className="px-4 pt-4 border-b border-border">

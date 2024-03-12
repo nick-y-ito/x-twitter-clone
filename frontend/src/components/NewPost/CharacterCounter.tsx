@@ -12,21 +12,31 @@ export const CharacterCounter = ({ count }: ICharacterCounterProps) => {
 	const showProgress = count <= MAX_CHARACTERS + 10;
 	const showDangerValue = count >= MAX_CHARACTERS;
 	const showDangerProgress = count >= MAX_CHARACTERS;
-	const circleColor = showDangerProgress ? "text-danger" : showValue ? "text-warn" : "text-accent";
+	const circleColor = showDangerProgress
+		? "text-danger"
+		: showValue
+		? "text-warn"
+		: "text-accent";
 
 	return (
-		<CircularProgress
-			className={circleColor}
-			size={24}
-			strokeWidth={showProgress ? 2 : 0}
-			percentage={percentage > 100 ? 100 : percentage}
-			track
-			trackClassName="stroke-border"
-			value={showValue ? MAX_CHARACTERS - count : ""}
-			valueClassName={cn(
-				"text-[12px] font-bold",
-				showDangerValue ? "text-danger" : "text-muted"
-			)}
-		/>
+		<div className="size-[30px] flex items-center justify-center -mr-1">
+			<CircularProgress
+				className={cn(
+					"transition-all duration-200 ease-in-out",
+					circleColor,
+					showValue && "scale-125"
+				)}
+				size={24}
+				strokeWidth={showProgress ? 2 : 0}
+				percentage={percentage > 100 ? 100 : percentage}
+				track
+				trackClassName="stroke-border"
+				value={showValue ? MAX_CHARACTERS - count : ""}
+				valueClassName={cn(
+					"text-[10px]",
+					showDangerValue ? "text-danger" : "text-muted"
+				)}
+			/>
+		</div>
 	);
 };

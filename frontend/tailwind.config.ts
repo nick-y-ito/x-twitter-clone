@@ -15,7 +15,6 @@ export default {
 				border: "var(--color-border)",
 				repost: "var(--color-repost)",
 				heart: "var(--color-heart)",
-				bookmark: "var(--color-bookmark)",
 			},
 			height: {
 				13: "3.25rem",

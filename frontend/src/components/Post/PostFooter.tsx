@@ -53,7 +53,7 @@ export const PostFooter = () => {
 					<IconBarChart className="size-4" />
 				</div>
 			</div>
-			<div className={cn("ml-auto", isBookmarked && "text-bookmark")}>
+			<div className={cn("ml-auto", isBookmarked && "text-accent")}>
 				<button
 					className="flex items-center justify-center size-9"
 					onClick={() => setIsBookmarked(!isBookmarked)}

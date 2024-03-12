@@ -4,6 +4,7 @@ import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";
 import { useEffect, useState } from "react";
 import { getPosts } from "./lib/actions";
+import { UserContextProvider } from "@/hooks/useUserContext";
 
 export const App = () => {
 	const [posts, setPosts] = useState<PostType[]>([]);
@@ -18,7 +19,7 @@ export const App = () => {
 	}, []);
 
 	return (
-		<>
+		<UserContextProvider>
 			<Header />
 			<main className="w-full min-h-screen">
 				<NewPost />
@@ -26,6 +27,6 @@ export const App = () => {
 					<Post key={post._id} post={post} />
 				))}
 			</main>
-		</>
+		</UserContextProvider>
 	);
 };

@@ -1,10 +1,22 @@
 import { IconSettings } from "@/assets/images/icons";
+import { useUserContext } from "@/hooks/useUserContext";
 
 export const Header = () => {
+	const { name, setName } = useUserContext();
+
+	const handleAvatarClick = async () => {
+		const newName = await prompt("Edit your name.", name);
+		if (!newName) return;
+		setName(newName);
+		alert("Name updated");
+	};
+
 	return (
 		<header>
 			<div className="flex justify-between items-center h-13 px-4">
-				<figure className="size-9 rounded-full bg-white"></figure>
+				<button onClick={handleAvatarClick}>
+					<figure className="size-9 rounded-full bg-white"></figure>
+				</button>
 				<img src="/z.png" alt="logo" className="h-8" />
 				<IconSettings className="text-white size-5" />
 			</div>

@@ -4,7 +4,8 @@ import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";
 import { useEffect, useState } from "react";
 import { getPosts } from "./lib/api";
-import { UserContextProvider } from "@/hooks";
+import { ColorThemeProvider, UserContextProvider } from "@/hooks";
+import { ColorTheme } from "@/const/appConst";
 
 export const App = () => {
 	const [posts, setPosts] = useState<PostType[]>([]);
@@ -19,14 +20,16 @@ export const App = () => {
 	}, []);
 
 	return (
-		<UserContextProvider>
-			<Header />
-			<main className="w-full min-h-screen">
-				<NewPost />
-				{posts.map((post) => (
-					<Post key={post._id} post={post} />
-				))}
-			</main>
-		</UserContextProvider>
+		<ColorThemeProvider defaultTheme={ColorTheme.DARK}>
+			<UserContextProvider>
+				<Header />
+				<main className="w-full min-h-screen">
+					<NewPost />
+					{posts.map((post) => (
+						<Post key={post._id} post={post} />
+					))}
+				</main>
+			</UserContextProvider>
+		</ColorThemeProvider>
 	);
 };

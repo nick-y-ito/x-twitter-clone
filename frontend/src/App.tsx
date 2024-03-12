@@ -4,7 +4,7 @@ import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";
 import { useEffect, useState } from "react";
 import { getPosts } from "./lib/api";
-import { UserContextProvider } from "@/hooks/useUserContext";
+import { UserContextProvider } from "@/hooks";
 
 export const App = () => {
 	const [posts, setPosts] = useState<PostType[]>([]);

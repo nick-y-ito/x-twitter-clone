@@ -1,20 +1,18 @@
 import { ReactNode, createContext, useState, useContext } from "react";
 
-interface IUserContext {
+type UserContextState = {
 	name: string;
 	slug: string;
 	setName: (name: string) => void;
-}
+};
 
-const UserContext = createContext<IUserContext>({
+const initialState: UserContextState = {
 	name: "",
 	slug: "",
 	setName: () => {},
-});
-
-export const useUserContext = () => {
-	return useContext(UserContext);
 };
+
+const UserContext = createContext<UserContextState>(initialState);
 
 interface IUserContextProviderProps {
 	children: ReactNode;
@@ -31,4 +29,8 @@ export const UserContextProvider = ({
 			{children}
 		</UserContext.Provider>
 	);
+};
+
+export const useUserContext = () => {
+	return useContext(UserContext);
 };

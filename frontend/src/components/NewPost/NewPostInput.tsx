@@ -28,7 +28,7 @@ export const NewPostInput = ({ content, setContent }: INewPostInputProps) => {
 				className="w-full text-xl"
 				placeholder="What is happening?"
 			/>
-			<button className="flex items-center gap-1 h-6 mt-3 text-accent">
+			<button type="button" className="flex items-center gap-1 h-6 mt-3 text-accent">
 				<IconEarth className="size-4" />
 				<span className="text-sm font-bold">Everyone can reply</span>
 			</button>

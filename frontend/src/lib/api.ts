@@ -1,3 +1,4 @@
+import { extractTags } from "@/lib/utils";
 import { NewPostType, PostType } from "@/types/post";
 
 export const getPosts = async (): Promise<PostType[]> => {
@@ -21,6 +22,7 @@ export const createPost = async (formData: FormData) => {
 	) as unknown as NewPostType;
 
 	newPost.dateAdded = new Date().toISOString();
+	newPost.tags = extractTags(newPost.content);
 
 	const res = await fetch("/api/twoot", {
 		method: "POST",

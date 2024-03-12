@@ -3,14 +3,18 @@ import { NewPost } from "@/components/NewPost/NewPost";
 import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";
 import { useEffect, useState } from "react";
+import { getPosts } from "./lib/actions";
 
 export const App = () => {
 	const [posts, setPosts] = useState<PostType[]>([]);
 
+	const fetchPosts = async () => {
+		const _posts = await getPosts();
+		setPosts(_posts);
+	};
+
 	useEffect(() => {
-		fetch("http://localhost:8080/twoots")
-			.then((res) => res.json())
-			.then(setPosts);
+		fetchPosts();
 	}, []);
 
 	return (

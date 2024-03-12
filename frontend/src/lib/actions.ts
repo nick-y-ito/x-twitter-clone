@@ -1,4 +1,19 @@
-import { NewPostType } from "@/types/post";
+import { NewPostType, PostType } from "@/types/post";
+
+export const getPosts = async (): Promise<PostType[]> => {
+	const res = await fetch("/api/twoots", {
+		method: "GET",
+	});
+
+	if (!res.ok) {
+		throw new Error(
+			`Failed to fetch posts with status: ${res.status}. ${res.statusText}`
+		);
+	}
+
+	const data = await res.json();
+	return data as PostType[];
+};
 
 export const createPost = async (formData: FormData) => {
 	const newPost = Object.fromEntries(
@@ -16,6 +31,8 @@ export const createPost = async (formData: FormData) => {
 	});
 
 	if (!res.ok) {
-		throw new Error("Failed to create a post.");
+		throw new Error(
+			`Failed to create post with status: ${res.status}. ${res.statusText}`
+		);
 	}
 };

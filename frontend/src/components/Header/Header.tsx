@@ -1,5 +1,5 @@
-import { IconSettings } from "@/assets/images/icons";
-import { useUserContext } from "@/hooks/useUserContext";
+import { ThemeColorToggler } from "@/components/Header/ThemeColorToggler";
+import { useUserContext } from "@/hooks";
 
 export const Header = () => {
 	const { name, setName } = useUserContext();
@@ -18,7 +18,7 @@ export const Header = () => {
 					<figure className="size-9 rounded-full bg-white"></figure>
 				</button>
 				<img src="/z.png" alt="logo" className="h-8" />
-				<IconSettings className="text-white size-5" />
+				<ThemeColorToggler />
 			</div>
 			<nav className="border-b border-border">
 				<div className="flex h-13">

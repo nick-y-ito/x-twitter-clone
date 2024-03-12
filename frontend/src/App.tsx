@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { Header } from "@/components/Header/Header";
 import { NewPost } from "@/components/NewPost/NewPost";
 import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";

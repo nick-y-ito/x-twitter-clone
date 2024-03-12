@@ -40,6 +40,7 @@ export const CircularProgress = ({
 			{track && (
 				<circle
 					strokeWidth={strokeWidth}
+					fill="transparent"
 					transform={`rotate(-90 ${radius} ${radius})`}
 					className={trackClassName}
 					r={r}

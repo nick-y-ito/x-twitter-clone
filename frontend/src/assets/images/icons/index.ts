@@ -16,3 +16,5 @@ export { default as IconGif } from "./icon-gif.svg?react";
 export { default as IconImage } from "./icon-image.svg?react";
 export { default as IconLocation } from "./icon-location.svg?react";
 export { default as IconPlus } from "./icon-plus.svg?react";
+export { default as IconSun } from "./icon-sun.svg?react";
+export { default as IconMoon } from "./icon-moon.svg?react";

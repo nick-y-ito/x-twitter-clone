@@ -11,15 +11,21 @@ interface ICircularProgressProps {
 	track?: boolean;
 	/** The class name for the background circle. */
 	trackClassName?: string;
+	/** The value to display in the center of the circle. */
+	value?: string | number;
+	/** The class name for the value. */
+	valueClassName?: string;
 }
 
 export const CircularProgress = ({
 	percentage = 100,
 	size = 36,
 	strokeWidth = 5,
+	className,
 	track = true,
 	trackClassName,
-	className,
+	value,
+	valueClassName
 }: ICircularProgressProps) => {
 	/** The radius of the circle including the stroke */
 	const radius = size / 2;
@@ -62,6 +68,16 @@ export const CircularProgress = ({
 				cx={radius} // Offset from the left
 				cy={radius} // Offset from the top
 			/>
+			<text
+				className={valueClassName}
+				x="50%"
+				y="53%"
+				fill="currentColor"
+				textAnchor="middle"
+				dominantBaseline="middle"
+			>
+				{value}
+			</text>
 		</svg>
 	);
 };

@@ -6,7 +6,7 @@ import { useNewPost } from "@/components/NewPost/useNewPost";
 
 export const NewPost = () => {
 	const { name, slug } = useUserContext();
-	const { values, setValues, handleSubmit } = useNewPost();
+	const { values, setValues, count, handleSubmit } = useNewPost();
 
 	return (
 		<form onSubmit={handleSubmit} className="px-4 pt-4 border-b border-border">
@@ -21,7 +21,7 @@ export const NewPost = () => {
 							setValues({ ...values, content });
 						}}
 					/>
-					<NewPostFooter />
+					<NewPostFooter count={count} />
 				</div>
 			</div>
 		</form>

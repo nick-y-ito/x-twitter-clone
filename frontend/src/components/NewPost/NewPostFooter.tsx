@@ -5,9 +5,17 @@ import {
 	IconLocation,
 	IconPlus,
 } from "@/assets/images/icons";
-import { CircularProgress } from "@/components/ui";
+import { CharacterCounter } from "@/components/NewPost/CharacterCounter";
+import { MAX_CHARACTERS } from "@/const/postConst";
+import { cn } from "@/lib/utils";
 
-export const NewPostFooter = () => {
+interface INewPostFooterProps {
+	count: number;
+}
+
+export const NewPostFooter = ({ count }: INewPostFooterProps) => {
+	const disabled = count < 1 || count > MAX_CHARACTERS;
+
 	return (
 		<div className="flex my-2">
 			<div className="flex-1 flex">
@@ -37,14 +45,7 @@ export const NewPostFooter = () => {
 				</button>
 			</div>
 			<div className="flex items-center gap-3">
-				<CircularProgress
-					className="text-accent"
-					size={24}
-					strokeWidth={2}
-					percentage={90}
-					track
-					trackClassName="stroke-border"
-				/>
+				<CharacterCounter count={count} />
 				<div className="h-full border-r border-border"></div>
 				<button
 					type="button"
@@ -52,7 +53,14 @@ export const NewPostFooter = () => {
 				>
 					<IconPlus className="size-4 text-accent" />
 				</button>
-				<button className="flex items-center justify-center bg-accent h-9 p-4 rounded-full font-bold text">
+				<button
+					type="submit"
+					className={cn(
+						"flex items-center justify-center bg-accent h-9 p-4 rounded-full font-bold text",
+						disabled && "opacity-50"
+					)}
+					disabled={disabled}
+				>
 					Post
 				</button>
 			</div>

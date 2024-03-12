@@ -12,6 +12,7 @@ export const useNewPost = () => {
 	};
 
 	const [values, setValues] = useState(defaultNewPost);
+	const count = values.content.length;
 
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault();
@@ -28,6 +29,7 @@ export const useNewPost = () => {
 	return {
 		values,
 		setValues,
+		count,
 		handleSubmit,
 	};
 };

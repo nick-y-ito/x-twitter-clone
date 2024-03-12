@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import { createPost } from "@/lib/actions";
+import { createPost } from "@/lib/api";
 import { NewPostType } from "@/types/post";
 
 export const useNewPost = () => {

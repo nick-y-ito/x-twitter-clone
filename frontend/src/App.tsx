@@ -3,7 +3,7 @@ import { NewPost } from "@/components/NewPost/NewPost";
 import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";
 import { useEffect, useState } from "react";
-import { getPosts } from "./lib/actions";
+import { getPosts } from "./lib/api";
 import { UserContextProvider } from "@/hooks/useUserContext";
 
 export const App = () => {

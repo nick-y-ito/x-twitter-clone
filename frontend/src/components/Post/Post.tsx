@@ -17,7 +17,11 @@ export const Post = ({ post }: { post: PostType }) => {
 				className="size-10 shrink-0 p-0.5"
 			/>
 			<div className="grow flex flex-col min-w-0">
-				<PostHeader author={post.author} authorSlug={post.authorSlug} />
+				<PostHeader
+					author={post.author}
+					authorSlug={post.authorSlug}
+					dateAdded={post.dateAdded}
+				/>
 				<PostBody content={post.content} tags={post.tags} />
 				<PostFooter />
 			</div>

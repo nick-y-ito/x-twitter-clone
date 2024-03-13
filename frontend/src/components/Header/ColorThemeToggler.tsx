@@ -11,6 +11,11 @@ export const ColorThemeToggler = () => {
 	const popoverRef = useRef(null);
 	useOutsideClick(popoverRef, () => setIsOpened(false));
 
+	const handleClick = (theme: ColorTheme) => {
+		setColorTheme(theme);
+		setIsOpened(false);
+	};
+
 	const { colorTheme, setColorTheme } = useColorThemeContext();
 
 	const buttons = [
@@ -43,7 +48,7 @@ export const ColorThemeToggler = () => {
 					{buttons.map((b, i) => (
 						<li key={i}>
 							<button
-								onClick={() => setColorTheme(b.theme)}
+								onClick={() => handleClick(b.theme)}
 								className="w-full py-1.5 px-2 text-left rounded hover:bg-border"
 							>
 								{b.text}

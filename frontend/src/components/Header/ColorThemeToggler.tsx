@@ -16,7 +16,7 @@ export const ColorThemeToggler = () => {
 		setIsOpened(false);
 	};
 
-	const { colorTheme, setColorTheme } = useColorThemeContext();
+	const { appliedColorTheme, setColorTheme } = useColorThemeContext();
 
 	const buttons = [
 		{ text: "Light", theme: ColorTheme.LIGHT },
@@ -33,7 +33,7 @@ export const ColorThemeToggler = () => {
 				}}
 			>
 				<figure className="text-primary-foreground">
-					{colorTheme === ColorTheme.LIGHT ? (
+					{appliedColorTheme === ColorTheme.LIGHT ? (
 						<IconSun className="size-5" />
 					) : (
 						<IconMoon className="size-5" />

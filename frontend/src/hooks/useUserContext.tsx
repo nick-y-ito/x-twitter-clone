@@ -1,3 +1,4 @@
+import { USER_CONST } from "@/const/userConst";
 import { ReactNode, createContext, useState, useContext } from "react";
 
 type UserContextState = {
@@ -21,8 +22,8 @@ interface IUserContextProviderProps {
 export const UserContextProvider = ({
 	children,
 }: IUserContextProviderProps) => {
-	const [name, setName] = useState("Nick");
-	const slug = "nick-y-ito";
+	const [name, setName] = useState<string>(USER_CONST.NAME);
+	const slug = USER_CONST.SLUG || "";
 
 	return (
 		<UserContext.Provider value={{ name, slug, setName }}>
@@ -38,5 +39,4 @@ export const useUserContext = () => {
 		throw new Error("useUserContext must be used within a UserContextProvider");
 
 	return context;
-
 };

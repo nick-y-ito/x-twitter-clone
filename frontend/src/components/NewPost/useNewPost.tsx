@@ -2,7 +2,11 @@ import { FormEvent, useState } from "react";
 import { createPost } from "@/lib/api";
 import { NewPostType } from "@/types/post";
 
-export const useNewPost = () => {
+export const useNewPost = ({
+	fetchPosts,
+}: {
+	fetchPosts: () => Promise<void>;
+}) => {
 	const defaultNewPost: NewPostType = {
 		author: "",
 		authorSlug: "",
@@ -21,6 +25,7 @@ export const useNewPost = () => {
 			await createPost(formData);
 			alert("Posted");
 			setValues(defaultNewPost);
+			await fetchPosts();
 		} catch {
 			return alert("Something went wrong. Please try again.");
 		}

@@ -1,4 +1,7 @@
 import { ThemeColorToggler } from "@/components/Header/ThemeColorToggler";
+import { Avatar } from "@/components/ui/Avatar";
+import { AVATAR_URL } from "@/const/appConst";
+import { USER_CONST } from "@/const/userConst";
 import { useUserContext } from "@/hooks";
 
 export const Header = () => {
@@ -15,7 +18,10 @@ export const Header = () => {
 		<header>
 			<div className="flex justify-between items-center h-13 px-4">
 				<button onClick={handleAvatarClick}>
-					<figure className="size-9 rounded-full bg-white"></figure>
+					<Avatar
+						src={`${AVATAR_URL}?seed=${USER_CONST.SLUG}`}
+						className="size-8"
+					/>
 				</button>
 				<img src="/z.png" alt="logo" className="h-8" />
 				<ThemeColorToggler />

@@ -24,7 +24,7 @@ export const App = () => {
 			<UserContextProvider>
 				<Header />
 				<main className="w-full min-h-screen">
-					<NewPost />
+					<NewPost fetchPosts={fetchPosts} />
 					{posts.map((post) => (
 						<Post key={post._id} post={post} />
 					))}

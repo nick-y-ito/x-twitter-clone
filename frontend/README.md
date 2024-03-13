@@ -1,30 +1,33 @@
-# React + TypeScript + Vite
+# Presentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Stack
 
-Currently, two official plugins are available:
+- TypeScript
+- React
+- Tailwind CSS
+- *No other UI libraries are used*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Presentation Topics
 
-## Expanding the ESLint configuration
+### Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [ ] Mobile-only design
+- [ ] How the `textarea` expands
+- [ ] How the character counter works
+- [ ] How the time is displayed
+- [ ] How the tags work (`#aaa #bbb c#cc # ddd eee#`)
+- [ ] How the rename functionality works
+- [ ] How the theme switcher works
+- [ ] How the popover works
 
-- Configure the top-level `parserOptions` property like this:
+### What I Learned
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- [ ] How to organize the code for Context APIs
+- [ ] How to implement color theme switching
+- [ ] How to implement UI parts without using UI libraries
+  - [ ] Character counter ()
+  - [ ] Popover (`useRef`)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Issues
+
+- When the focus is on the `textarea`, the body tag is continuously rerendered

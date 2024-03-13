@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const extractTags = (content: string) => {
-	const tags = content.match(/#\w+/g);
+	const tags = content.match(/(?<!\w)#(\w+)/g);
 	return tags?.map((tag) => tag.slice(1));
 };
 

@@ -1,4 +1,4 @@
-import { ThemeColorToggler } from "@/components/Header/ThemeColorToggler";
+import { ColorThemeToggler } from "@/components/Header/ColorThemeToggler";
 import { Avatar } from "@/components/ui/Avatar";
 import { AVATAR_URL } from "@/const/appConst";
 import { USER_CONST } from "@/const/userConst";
@@ -24,7 +24,7 @@ export const Header = () => {
 					/>
 				</button>
 				<img src="/z.png" alt="logo" className="h-8" />
-				<ThemeColorToggler />
+				<ColorThemeToggler />
 			</div>
 			<nav className="border-b border-border">
 				<div className="flex h-13">

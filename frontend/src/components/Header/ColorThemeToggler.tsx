@@ -3,7 +3,7 @@ import { ColorTheme } from "@/const/appConst";
 import { useColorThemeContext } from "@/hooks";
 import { useState } from "react";
 
-export const ThemeColorToggler = () => {
+export const ColorThemeToggler = () => {
 	const [isOpened, setIsOpened] = useState(false);
 
 	const { colorTheme, setColorTheme } = useColorThemeContext();

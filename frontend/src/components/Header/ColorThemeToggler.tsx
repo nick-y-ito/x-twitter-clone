@@ -1,10 +1,15 @@
 import { IconMoon, IconSun } from "@/assets/images/icons";
 import { ColorTheme } from "@/const/appConst";
 import { useColorThemeContext } from "@/hooks";
-import { useState } from "react";
+import { useOutsideClick } from "@/hooks/useOutsideClick";
+import { useRef, useState } from "react";
 
 export const ColorThemeToggler = () => {
 	const [isOpened, setIsOpened] = useState(false);
+
+	/* Popover reference to detect outside click */
+	const popoverRef = useRef(null);
+	useOutsideClick(popoverRef, () => setIsOpened(false));
 
 	const { colorTheme, setColorTheme } = useColorThemeContext();
 
@@ -31,7 +36,10 @@ export const ColorThemeToggler = () => {
 				</figure>
 			</button>
 			{isOpened && (
-				<ul className="absolute z-10 right-0 border border-border rounded text-sm w-32 p-1 bg-primary shadow">
+				<ul
+					className="absolute z-10 right-0 border border-border rounded text-sm w-32 p-1 bg-primary shadow"
+					ref={popoverRef}
+				>
 					{buttons.map((b, i) => (
 						<li key={i}>
 							<button

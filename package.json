@@ -1,8 +1,9 @@
 {
-	"name": "wad-301-mid-term-twootr",
+	"name": "z",
 	"version": "1.0.0",
-	"description": "Twootr is a Single Page Application that will allow the user to read and create _twoots_. No user authentication or registration is required.",
+	"description": "Z is a clone app of X (Twitter)",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"frontend": "npm run dev --prefix frontend",
 		"server": "npm start --prefix server",

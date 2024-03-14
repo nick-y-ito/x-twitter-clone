@@ -1,7 +1,7 @@
 {
-	"name": "twootr-server",
+	"name": "z-backend",
 	"version": "1.0.0",
-	"description": "Twootr Server.",
+	"description": "Z Backend",
 	"main": "server.js",
 	"type": "module",
 	"scripts": {

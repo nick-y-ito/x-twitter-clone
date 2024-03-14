@@ -2,7 +2,7 @@ import { extractTags } from "@/lib/utils";
 import { NewPostType, PostType } from "@/types/post";
 
 export const getPosts = async (): Promise<PostType[]> => {
-	const res = await fetch("/api/twoots", {
+	const res = await fetch("/api/posts", {
 		method: "GET",
 	});
 
@@ -24,12 +24,12 @@ export const createPost = async (formData: FormData) => {
 	newPost.dateAdded = new Date().toISOString();
 	newPost.tags = extractTags(newPost.content);
 
-	const res = await fetch("/api/twoot", {
+	const res = await fetch("/api/post", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
 		},
-		body: JSON.stringify({ newTwoot: newPost }),
+		body: JSON.stringify({ newPost }),
 	});
 
 	if (!res.ok) {

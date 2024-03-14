@@ -1,0 +1,16 @@
+{
+	"version": 2,
+	"buildCommand": "npm run build",
+	"builds": [
+		{
+			"src": "./server/server.js",
+			"use": "@vercel/node"
+		}
+	],
+	"rewrites": [
+		{
+			"source": "/(.*)",
+			"destination": "/server/server.js"
+		}
+	]
+}

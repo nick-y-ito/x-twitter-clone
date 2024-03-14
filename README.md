@@ -1,5 +1,7 @@
 ## Z - Clone App of X (Twitter)
 
+<img width="350" alt="Screenshot 2024-03-14 at 14 34 23" src="https://github.com/nick-y-ito/x-clone/assets/99148565/33e0c307-6cb7-4e3b-804c-7be966d1060a">
+
 ## Stack
 
 - TypeScript
@@ -31,11 +33,11 @@
 
 ### Character counter and expanding textarea
 
-
+https://github.com/nick-y-ito/x-clone/assets/99148565/74ef8037-545b-4521-9ceb-689147b7949b
 
 ### Color Theme switching
 
-
+https://github.com/nick-y-ito/x-clone/assets/99148565/ce16e685-16a5-4591-94e1-c1a517479142
 
 ## Issues
 

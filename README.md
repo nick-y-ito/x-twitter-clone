@@ -39,7 +39,28 @@ https://github.com/nick-y-ito/x-clone/assets/99148565/74ef8037-545b-4521-9ceb-68
 
 https://github.com/nick-y-ito/x-clone/assets/99148565/ce16e685-16a5-4591-94e1-c1a517479142
 
-## Issues
+## Getting Started
 
-- The `body` tag appears to be continuously re-rendered when the focus is on the textarea.
+This project is a monorepo, so you need to install the dependencies for both the frontend and backend. Run the following commands in the root directory.
 
+### Install dependencies
+
+```bash
+npm ci
+```
+
+### Run frontend and backend together
+
+```bash
+npm run dev
+```
+
+### Run frontend and backend separately
+
+```bash
+npm run frontend
+```
+
+```bash
+npm run server
+```

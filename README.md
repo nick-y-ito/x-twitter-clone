@@ -12,7 +12,7 @@
 ## Features
 
 - `textarea` expanding as the content grows ([NewPostInput.tsx](./frontend/src/components/NewPost/NewPostInput.tsx))
-- Character counter implementation ([CharacterCounter.tsx](./frontend/src/components/NewPost/CharacterCounter.tsx))
+- Character counter implementation ([CharacterCounter.tsx](./frontend/src/components/NewPost/CharacterCounter.tsx), [CircularProgress.tsx](./frontend/src/components/ui/CircularProgress.tsx))
 - Time display format ([utils.ts](./frontend/src/lib/utils.ts) > `getTimeDifference()`)
 - Tag functionality (`#aaa` and `#bbb` are only considered as tags in `#aaa #bbb c#cc # ddd eee#`)
 - Color Theme switching ([useColorThemeContext.tsx](./frontend/src/hooks/useColorThemeContext.tsx))

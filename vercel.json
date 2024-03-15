@@ -1,6 +1,6 @@
 {
 	"version": 2,
-	"buildCommand": "npm run build",
+	"buildCommand": "npm i && npm run build",
 	"builds": [
 		{
 			"src": "./server/server.js",
@@ -11,6 +11,10 @@
 		{
 			"source": "/(.*)",
 			"destination": "/server/server.js"
+		},
+		{
+			"source": "/(.*)",
+			"destination": "/index.html"
 		}
 	]
 }

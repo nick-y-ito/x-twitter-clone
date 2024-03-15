@@ -1,12 +1,8 @@
 {
 	"version": 2,
-	"buildCommand": "npm i && npm run build",
-	"builds": [
-		{
-			"src": "./server/server.js",
-			"use": "@vercel/node"
-		}
-	],
+	"buildCommand": "cd frontend && npm i && npm run build",
+	"outputDirectory": "frontend/dist/",
+	"framework": "vite",
 	"rewrites": [
 		{
 			"source": "/(.*)",

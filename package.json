@@ -11,10 +11,6 @@
 		"build": "npm run build --prefix frontend",
 		"start": "npm run server --prefix server"
 	},
-	"workspaces": [
-		"frontend",
-		"server"
-	],
 	"keywords": [],
 	"author": "",
 	"license": "ISC",

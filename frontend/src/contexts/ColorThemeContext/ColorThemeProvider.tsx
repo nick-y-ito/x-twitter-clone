@@ -1,11 +1,5 @@
 import { ColorTheme } from "@/const/appConst";
-import {
-	ReactNode,
-	createContext,
-	useContext,
-	useEffect,
-	useState,
-} from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 
 /** The type for the color theme context state */
 type ColorThemeProviderState = {
@@ -22,7 +16,7 @@ const initialState: ColorThemeProviderState = {
 };
 
 /** The context for the color theme */
-const ColorThemeProviderContext =
+export const ColorThemeProviderContext =
 	createContext<ColorThemeProviderState>(initialState);
 
 interface ThemeProviderProps {
@@ -108,16 +102,4 @@ export const ColorThemeProvider = ({
 			{children}
 		</ColorThemeProviderContext.Provider>
 	);
-};
-
-/** A hook to use the color theme context */
-export const useColorThemeContext = () => {
-	const context = useContext(ColorThemeProviderContext);
-
-	if (context === undefined)
-		throw new Error(
-			"useColorThemeContext must be used within a ColorThemeProvider"
-		);
-
-	return context;
 };

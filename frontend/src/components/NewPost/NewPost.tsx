@@ -1,10 +1,10 @@
 import { NewPostInput } from "@/components/NewPost/NewPostInput";
 import { NewPostFooter } from "./NewPostFooter";
 import { PostType } from "@/types/post";
-import { useUserContext } from "@/hooks";
 import { useNewPost } from "@/components/NewPost/useNewPost";
 import { Avatar } from "@/components/ui/Avatar";
 import { AVATAR_URL } from "@/const/appConst";
+import { useUserContext } from "@/contexts/UserContext/useUserContext";
 
 export const NewPost = ({
 	fetchPosts,

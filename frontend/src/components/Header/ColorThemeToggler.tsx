@@ -1,6 +1,6 @@
 import { IconMoon, IconSun } from "@/assets/images/icons";
 import { ColorTheme } from "@/const/appConst";
-import { useColorThemeContext } from "@/hooks";
+import { useColorThemeContext } from "@/contexts/ColorThemeContext/useColorThemeContext";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
 import { useRef, useState } from "react";
 

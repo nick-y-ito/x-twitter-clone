@@ -2,7 +2,7 @@ import { ColorThemeToggler } from "@/components/Header/ColorThemeToggler";
 import { Avatar } from "@/components/ui/Avatar";
 import { AVATAR_URL } from "@/const/appConst";
 import { USER_CONST } from "@/const/userConst";
-import { useUserContext } from "@/hooks";
+import { useUserContext } from "@/contexts/UserContext/useUserContext";
 
 export const Header = () => {
 	const { name, setName } = useUserContext();

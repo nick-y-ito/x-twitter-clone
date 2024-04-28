@@ -4,8 +4,9 @@ import { Post } from "@/components/Post/Post";
 import { PostType } from "@/types/post";
 import { useEffect, useState } from "react";
 import { getPosts } from "./lib/api";
-import { ColorThemeProvider, UserContextProvider } from "@/hooks";
 import { ColorTheme } from "@/const/appConst";
+import { UserContextProvider } from "@/contexts/UserContext/UserContextProvider";
+import { ColorThemeProvider } from "@/contexts/ColorThemeContext/ColorThemeProvider";
 
 export const App = () => {
 	const [posts, setPosts] = useState<PostType[]>([]);
